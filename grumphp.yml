@@ -9,15 +9,6 @@ parameters:
             fixers: []
             level: ~
             verbose: true
-        phpmd:
-            exclude: ['tests', 'database']
-            ruleset: ['phpmd.xml']
-            triggered_by: ['php']
-        phpstan:
-            autoload_file: ~
-            configuration: phpstan.neon
-            level: 4
-            triggered_by: ['php']
         phpunit:
             config_file: phpunit.xml
             testsuite: ~
