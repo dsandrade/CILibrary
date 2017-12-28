@@ -1,0 +1,16 @@
+parameters:
+    ignoreErrors:
+        - '#Call to static method [a-zA-Z0-9\\_]+\(\) on an unknown class [a-zA-Z0-9\\_]+#'
+        - '#Call to an undefined static method [a-zA-Z0-9\\_]+::[a-zA-Z0-9\\_]+\(\)#'
+        - '#Access to an undefined property [a-zA-Z0-9\\_]+Presenter::\$[a-zA-Z0-9\\_]+#'
+        - '#Access to an undefined property Library\\Models\\[a-zA-Z0-9\\_]+::\$[a-zA-Z0-9\\_]+#'
+        - '#Access to an undefined property Library\\Entry\\[a-zA-Z0-9\\_]+::\$[a-zA-Z0-9\\_]+#'
+        - '#Call to an undefined method Library\\Contracts\\CommandInterface::[a-zA-Z0-9\\_]+\(\)#'
+        - '#Access to an undefined property Illuminate\\Contracts\\Foundation\\Application::\$[a-zA-Z0-9\\_]+#'
+        - '#Access to an undefined property Illuminate\\Database\\Eloquent\\Model::\$[a-zA-Z0-9\\_]+#'
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Model::[a-zA-Z0-9\\_]+\(\)#'
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder::[a-zA-Z0-9\\_]+\(\)#'
+    excludes_analyse:
+            - %rootDir%/../../../tests/*
+            - %rootDir%/../../../database/*
+            - %rootDir%/../../../system/*
