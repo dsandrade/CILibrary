@@ -23,7 +23,7 @@ class BaseController extends \CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->blade = new Blade(VIEWPATH, APPPATH.'/cache/');
+        $this->blade = new Blade(VIEWPATH, APPPATH.'cache/');
         $this->data = [];
     }
 
