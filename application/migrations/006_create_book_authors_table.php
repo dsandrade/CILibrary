@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class CreateUsersTable extends CI_Migration
+class Migration_Create_book_authors_table extends CI_Migration
 {
     /**
      * CreateReadersTable constructor.
@@ -26,22 +26,18 @@ class CreateUsersTable extends CI_Migration
                 'unsigned' => true,
                 'auto_increment' => true
             ],
-            'name' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
+            'book_id' => [
+                'type' => 'INT',
+                'unsigned' => true,
             ],
-            'login' => [
-                'type' => 'VARCHAR',
-                'unique' => true,
-                'constraint' => '255',
-            ],
-            'password' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
-            ],
+            'author_id' => [
+                'type' => 'INT',
+                'unsigned' => true,
+            ]
         ]);
+
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('users');
+        $this->dbforge->create_table('book_authors');
     }
 
     /**
@@ -51,6 +47,6 @@ class CreateUsersTable extends CI_Migration
      */
     public function down()
     {
-        $this->dbforge->drop_table('users');
+        $this->dbforge->drop_table('book_authors');
     }
 }

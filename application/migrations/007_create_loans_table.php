@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class CreateBookAuthorsTable extends CI_Migration
+class Migration_Create_loans_table extends CI_Migration
 {
     /**
      * CreateReadersTable constructor.
@@ -30,14 +30,34 @@ class CreateBookAuthorsTable extends CI_Migration
                 'type' => 'INT',
                 'unsigned' => true,
             ],
-            'author_id' => [
+            'reader_id' => [
+                'type' => 'INT',
+                'unsigned' => true,
+            ],
+            'withdrawal_at' => [
+                'type' => 'DATE',
+                'null' => true
+            ],
+            'return_date' => [
+                'type' => 'DATE',
+                'null' => true
+            ],
+            'returned_at' => [
+                'type' => 'DATE',
+                'null' => true
+            ],
+            'canceled_at' => [
+                'type' => 'DATE',
+                'null' => true
+            ],
+            'user_id' => [
                 'type' => 'INT',
                 'unsigned' => true,
             ]
         ]);
 
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('book_authors');
+        $this->dbforge->create_table('loans');
     }
 
     /**
@@ -47,6 +67,6 @@ class CreateBookAuthorsTable extends CI_Migration
      */
     public function down()
     {
-        $this->dbforge->drop_table('book_authors');
+        $this->dbforge->drop_table('loans');
     }
 }

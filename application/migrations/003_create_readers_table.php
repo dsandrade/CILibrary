@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class CreatePublishersTable extends CI_Migration
+class Migration_Create_readers_table extends CI_Migration
 {
     /**
      * CreateReadersTable constructor.
@@ -33,7 +33,7 @@ class CreatePublishersTable extends CI_Migration
         ]);
 
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('publishers');
+        $this->dbforge->create_table('readers');
     }
 
     /**
@@ -43,6 +43,6 @@ class CreatePublishersTable extends CI_Migration
      */
     public function down()
     {
-        $this->dbforge->drop_table('publishers');
+        $this->dbforge->drop_table('readers');
     }
 }

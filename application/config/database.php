@@ -75,10 +75,10 @@ $query_builder = true;
 
 $db['default'] = [
     'dsn'	=> '',
-    'hostname' => 'localhost',
-    'username' => '',
-    'password' => '',
-    'database' => '',
+    'hostname' => 'pgsql:host=postgres;port=5432;dbname=CILibrary',
+    'username' => 'docker',
+    'password' => 'docker',
+    'database' => 'CILibrary',
     'dbdriver' => 'pdo',
     'dbprefix' => '',
     'pconnect' => false,

@@ -59,3 +59,4 @@ $route['translate_uri_dashes'] = false;
  */
 
 $route['admin'] = 'AdminController/index';
+$route['migrations'] = 'MigrateController/index';
